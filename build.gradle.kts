@@ -18,10 +18,10 @@ repositories {
 	mavenCentral()
 }
 
-extra["otelVersion"] = "1.33.3"
+extra["otelVersion"] = "2.21.0"
 extra["springCloudVersion"] = "2025.0.0"
 extra["testcontainersVersion"] = "1.19.8"
-extra["testKeycloakVersion"] = "3.9.1"
+extra["testKeycloakVersion"] = "3.9.0"
 
 val otelVersion: String by project
 val springCloudVersion: String by project
@@ -49,6 +49,13 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
 	testImplementation("com.github.dasniko:testcontainers-keycloak:$testKeycloakVersion")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom("org.testcontainers:testcontainers-bom:$testcontainersVersion")
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
+	}
 }
 
 tasks.withType<Test> {

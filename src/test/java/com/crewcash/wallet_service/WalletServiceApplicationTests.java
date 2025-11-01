@@ -1,10 +1,10 @@
-package com.crewcash.template_project;
+package com.crewcash.wallet_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TemplateProjectApplicationTests {
+class WalletServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
