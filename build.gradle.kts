@@ -34,7 +34,6 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
-	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.retry:spring-retry")
 	implementation("org.flywaydb:flyway-core")
 
@@ -43,6 +42,7 @@ dependencies {
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
+	testImplementation("io.r2dbc:r2dbc-h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
 	testImplementation("org.springframework.security:spring-security-test")
